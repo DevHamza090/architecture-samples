@@ -97,6 +97,11 @@ fun TaskDetailScreen(
             if (uiState.isTaskDeleted) {
                 onDeleteTask()
             }
+        }// Check if the task is deleted and call onDeleteTask
+        LaunchedEffect(uiState.isTaskDeleted) {
+            if (uiState.isTaskDeleted) {
+                onDeleteTask()
+            }
         }
     }
 }
